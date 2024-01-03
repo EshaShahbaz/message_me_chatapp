@@ -3,14 +3,47 @@
   <head>
     <title>MessageMeChatapp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"></script>
+    
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+          <div class="ui small inverted menu">
+              <div class="ui container">
+             <%= render 'layouts/navigation' %>
+          </div>
+        </div>
+    <div class="ui container">
+        <%= yield %>
+    </div>
+    <script>
+    $('.ui.dropdown')
+  .dropdown({
+    values: [
+      {
+        name: 'Log in',
+        value: 'log in'
+      },
+      {
+        name: 'Log out',
+        value: 'log out'
+      },
+      {
+        name     : 'Sign up',
+        value    : 'sign up',
+        selected : true
+      }
+    ]
+  })
+;
+    </script>
   </body>
 </html>
