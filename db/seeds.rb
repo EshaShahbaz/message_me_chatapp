@@ -12,3 +12,7 @@ User.create(username: "Pakiza",password: "password2")
 User.create(username: "Bri Pakiza",password: "password3")
 User.create(username: "Abdullah",password: "password4")
 User.create(username: "Abdurehman",password: "password5")
+
+
+Message.create(body:"Hello guys",user:User.last)
+Message.create(body:"Hi, i am chikin",user:User.second)
