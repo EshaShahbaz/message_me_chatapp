@@ -22,9 +22,15 @@
           </div>
         </div>
     <div class="ui container">
+    <%= render 'layouts/messages' %>
         <%= yield %>
     </div>
     <script>
+    $('.ui.dropdown')
+  .dropdown()
+;
+</script>
+    <%# <script>
     $('.ui.dropdown')
   .dropdown({
     values: [
@@ -44,6 +50,6 @@
     ]
   })
 ;
-    </script>
+    </script> %>
   </body>
 </html>
